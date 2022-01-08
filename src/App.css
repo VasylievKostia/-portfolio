@@ -1,38 +1,102 @@
+:root {
+  --main-text-color: #ececec;
+  --accent-color: #188ce8;
+  --background-color: #1d1f21;
+  --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+  --transformationt-time: 250ms;
+}
 .App {
   text-align: center;
+  color: var(--main-text-color);
+  background-color: var(--background-color);
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+  list-style: none;
+  padding: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav {
+  width: 1200px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-end;
+}
+.nav__link {
+  padding: 10px 0px;
+  margin: 0px 35px;
+}
+.nav__link:last-child {
+  color: red;
+  margin-right: 100px;
+}
+.hero {
+  height: 95vh;
+  background-image: url(./images/hero.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero__text {
+  padding: 15% 0 0 50%;
+  color: var(--main-text-color);
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: left;
+}
+.hero__text::first-letter {
+  color: var(--accent-color);
+  font-size: 42px;
+}
+.hero__button {
+  background-color: var(--main-text-color);
+  color: var(--background-color);
+  transition: background-color var(--transformationt-time) var(--cubic-bezier);
+  width: 8rem;
+  height: 2.5rem;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 50px;
+  margin-left: 35%;
+}
+.hero__button:focus,
+.hero__button:hover {
+  background-color: var(--accent-color);
+  color: var(--main-text-color);
+  box-shadow: none;
+}
+.aboutMe {
+  width: 1200px;
+  padding: 15px;
+}
+.aboutMe__thomb {
+  display: flex;
+}
+.aboutMe__skills {
+  width: 50%;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.skills__item {
+  /* text-align: center; */
 }
